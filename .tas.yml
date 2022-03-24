@@ -1,0 +1,19 @@
+---
+framework: mocha
+preRun:
+     command:
+        - docker run --name mongo -d -p 27017:27017 mongo:3.6 --replSet=rs0
+        - npm i chromedriver
+        - docker exec mongo mongo --eval 'rs.initiate({_id:"rs0", members: [{"_id":1, "host":"localhost:27017"}]})'
+        - npm install
+preMerge:
+  pattern:
+    - "./app/**/tests/*.tests.ts"
+postMerge:
+  pattern: 
+    - "./app/**/tests/*.tests.ts"
+postRun:
+     command:
+        - node --version
+configFile: ./.mocharc.js
+version: 1.0
