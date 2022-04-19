@@ -1,7 +1,7 @@
 framework: mocha
 preRun:
   command:
-    - npm ci
+    - yarn install
 preMerge:
   pattern: ['app/**/*.spec.ts', 'app/**/*.tests.js', 'app/**/*.tests.ts', 'server/**/*.tests.ts', 'ee/**/*.tests.ts']
 postMerge:
