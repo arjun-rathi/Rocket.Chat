@@ -6,7 +6,7 @@
 		"@babel/register",
 		"regenerator-runtime/runtime",
 		"ts-node/register",
-		"./tests/setup/chaiPlugins.ts"
+		"tests/setup/chaiPlugins.ts"
 	],
 	"watch-files": [
 		"./**/*.js",
