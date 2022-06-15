@@ -9,5 +9,5 @@ postMerge:
 postRun:
   command:
     - node --version
-configFile: ./.mocharc.js
+configFile: .mocharc.js
 version: 1.0
